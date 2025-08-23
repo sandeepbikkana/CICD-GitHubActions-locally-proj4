@@ -1,4 +1,3 @@
-# Example Node.js app (replace with your stack if different)
 FROM node:18-alpine
 
 WORKDIR /app
