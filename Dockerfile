@@ -1,11 +1,14 @@
-FROM node:18-alpine
+# Base image
+FROM python:3.10-slim
 
+# Set workdir
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install --only=production
+# Copy files
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 3000
-CMD ["npm", "start"]
+# Run app
+CMD ["python", "app.py"]
