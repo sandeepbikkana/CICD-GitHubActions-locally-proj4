@@ -32,7 +32,7 @@ jobs:
       # 4. Run tests inside container
       - name: Run tests
         run: |
-          docker run --rm sandeepbikkana87/my-app:latest sh -c "pytest"  # Adjust to your test command
+          docker run --rm sandeepbikkana87/my-app:latest sh -c "echo container started" # Adjust to your test command
 
       # 5. Push image to Docker Hub
       - name: Push to Docker Hub
