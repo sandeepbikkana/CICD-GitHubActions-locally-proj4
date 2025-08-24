@@ -37,4 +37,3 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/cicd-docker-demo:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/cicd-docker-demo:latest
-
